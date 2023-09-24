@@ -3,6 +3,9 @@ import json
 import random
 
 async def whosmells(message, bot):
+    ''' Gets guild id and role id from json file.
+    Creates a list of users in the desired role, picks a random user and sends message
+    '''
     if message.content.lower().startswith("who smells?"):
             data = {}
             guild_id = str(message.guild.id)
@@ -25,6 +28,7 @@ async def whosmells(message, bot):
 
 
 async def roleid_set(message):
+    '''Stores guild id and role id in json file'''
     if message.content.lower().startswith("!roleid"):
             try:
                 with open("roleid.json", "r+") as file:

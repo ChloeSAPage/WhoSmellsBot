@@ -24,10 +24,10 @@ async def on_message(message):
     if message.author == bot.user:
         return
     
-    await functions.whosmells(message, bot)
-    
     if message.content.lower().startswith("!"):
         await functions.roleid_set(message)
+        
+    await functions.whosmells(message, bot)
 
 @bot.event
 async def on_guild_join(guild):
