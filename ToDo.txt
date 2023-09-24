@@ -1,0 +1,3 @@
+@user smells
+
+Get list of current users in call, pick random, bot joins call, tts user smells, leaves. 
